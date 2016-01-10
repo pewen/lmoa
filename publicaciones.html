@@ -23,7 +23,7 @@ title: Publicaciones
     <div class="col-md-3">
       {% if pub.link %}
       <a href="{{ pub.link }}" target="_blank">
-	<img src="{{ pub.img }}" alt="img of publication" />
+	<img src="{{ site.url }}{{ pub.img }}" alt="img of publication" />
       </a>
       {% else %}
       <img src="{{ site.url }}{{ pub.img }}" alt="img of publication" />
