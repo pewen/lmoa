@@ -18,7 +18,7 @@
     {% for img in site.data.img_cover %}
     <div class="item {% if forloop.index == 1 %} active {% endif %} ad{{ forloop.index }}">
       <!-- Imagen -->
-      <div class="fill" style="background-image:url({{ img.url }});"></div>
+      <div class="fill" style="background-image:url({{ site.url }}{{ img.url }});"></div>
       <!-- Descripción -->
       {% if img.title %}
       
