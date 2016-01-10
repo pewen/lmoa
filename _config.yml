@@ -5,7 +5,7 @@ description: "Write an awesome description for your new site here. You can edit 
 
 # Server
 baseurl: ""
-url: "https://pewen.github.io/lmoa/"
+url: "https://pewen.github.io/lmoa"
 encoding: utf-8
 
 #time zone

@@ -5,7 +5,7 @@ name: Carlos A. Chesta
 degree: Dr. Ciencia Química
 position: investigador
 job: Tema te investigación
-img: /img/integrantes/carlos.png
+img: img/integrantes/carlos.png
 ---
 
 ### Información Personal
