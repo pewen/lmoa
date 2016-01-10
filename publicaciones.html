@@ -1,0 +1,36 @@
+---
+layout: page
+title: Publicaciones
+---
+
+<h2>Publicaciones</h2>
+
+<p>Un listado de las publicaciones. Si se quiere, se puede poner un link al lugar donde comprarla o de donde bajarla (por ej, la segunda y tercera publicación).</p>
+
+{% for pub in site.data.publicaciones %}
+<div class="publication">
+  <div class="row">
+    <div class="{% if pub.img %} col-md-9 {% else %} col-md-12 {% endif %}">
+      {% if pub.link %}
+      <h3><a href="{{ pub.link }}" target="_blank">{{ pub.title}}</a></h3>
+      {% else %}
+      <h3>{{ pub.title}}</h3>
+      {% endif %}
+      <p>{{ pub.authors}} {{ pub.place }}</p>
+    </div><!--/col-md -->
+    
+    {% if pub.img %}
+    <div class="col-md-3">
+      {% if pub.link %}
+      <a href="{{ pub.link }}" target="_blank">
+	<img src="{{ pub.img }}" alt="img of publication" />
+      </a>
+      {% else %}
+      <img src="{{ pub.img }}" alt="img of publication" />
+      {% endif %}
+    </div><!--/col-md -->
+    {% endif %}
+    
+  </div><!--/row -->
+</div><!--/publication -->
+{% endfor %}

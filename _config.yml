@@ -1,0 +1,26 @@
+# Site settings
+title:  "- Laboratorio de Microscopia Óptica Avanzada"
+email: your-email@domain.com
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+# Server
+baseurl: ""
+url: "http://0.0.0.0:4000"
+encoding: utf-8
+
+#time zone
+timezone: America/Argentina/Cordoba
+
+# Dependencies
+markdown: kramdown
+rouge: pygments
+exclude: [.git, .gitignore]
+
+# Build settings
+permalink: pretty
+
+
+collections:
+  equipo:
+    output: true
+    permalink: /integrantes/:path/

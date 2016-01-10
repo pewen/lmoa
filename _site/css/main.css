@@ -1,0 +1,340 @@
+/* Personal CSS
+ * Author: @fnbellomo
+ */
+
+/*************************************************************
+ * Base structure
+ *************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    background-color: #fdfdfd;
+}
+
+.site-name {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: #212121;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+		      color: #0193e0;
+		      outline: 0px none;
+		      text-decoration: none;
+		      transition: all 0.25s linear 0s;
+		  }
+
+hr {
+    border-color: rgb(1, 147, 224);
+    border-width: 3px;
+}
+
+.header-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden;
+}
+
+/*************************************************************
+ * Nav Bar
+ *************************************************************/
+.navbar-nav {
+    font-size: 15px;
+}
+
+.navbar-nav > li > a {
+    font-weight: bold;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 16px;
+}
+
+@media (max-width: 979px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+
+.menu {
+    color: #FFF;
+}
+
+.menu p {
+    display: inline;
+}
+
+
+/*************************************************************
+ * Logo
+ *************************************************************/
+.logo {
+    padding-top: 50px;
+    background-image: url("../img/logo_fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center 30px;
+}
+
+.logo p {
+    line-height: 70px;
+    float: left;
+    margin-right: 20px;
+    color: #FFF;
+    font-size: 50px;
+}
+
+#banner_name {
+    font-weight: normal;
+    font-size: 22px;
+    color: #59B7D9;
+    float: left;
+    text-transform: uppercase;
+}
+
+#banner_place {
+    color: #BCBEC0;
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    margin: 25px 0px 0px 20px;
+}
+
+/*************************************************************
+ * Main Page
+ *************************************************************/
+#myCarousel {
+    padding-top: 50px;
+}
+
+.carousel {
+    height: 90%;
+}
+
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* The img is select in the HTML */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.tex-left-area, .text-left-area-small {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* No small text area  */
+.tex-left-area {
+    left: 3%;
+    width: 40%;
+}
+
+.tex-left-area:hover {
+    background-color: rgba(32, 32, 32, 0.9);
+}
+
+.tex-left-area:hover .description {
+    max-height: 300px;
+}
+
+.title{
+    font-size: 2.7em;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+.description {
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+    display: block;
+    line-height: 1.4em;
+    margin-bottom: 1.4em;
+}
+
+/* Small text area */
+.title-small{
+    font-size: 2.2em;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+/*************************************************************
+ * Integrantes
+ *************************************************************/
+.integrantes {
+    padding-bottom: 30px;
+    border-top: 3px solid rgb(1, 147, 224);
+    padding-top: 30px;
+}
+
+.box-def {
+    background: #FFF none repeat scroll 0% 0%;
+    box-shadow: 3px 4px 15px -6px #000;
+    padding: 20px 25px;
+    position: relative;
+    text-align: center;
+}
+
+.box-img {
+    overflow: hidden;
+    height: 100%; 
+}
+
+.box-img img {
+    transition: all 0.5s ease 0s;
+    height: auto;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-img img:hover {
+    transform: scale(1.15);
+}
+
+.box-def h4 {
+    line-height: 1.3em;
+    border-bottom: 1px solid #D4DFF6;
+    padding: 0px 15px 18px;
+}
+
+.box-def p {
+    color: #87818C;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.6em;
+    padding: 0px 15px;
+}
+
+.personal-data {
+     padding-top: 50px;
+}
+
+.personal-data img{
+    padding-top: 80px;
+}
+
+/****************************************
+ * Publicaciones
+ ****************************************/
+.publication {
+    border-top: 2px solid #0193e0;
+    padding-bottom: 30px;
+}
+
+.publication h3 {
+    line-height: 120%;
+    font-family: "Playfair Display";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.publication p {
+    font-size: 15px;
+}
+
+.publication img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/****************************************
+ * Footer
+ ****************************************/
+.page-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #FFF;
+    background-color: #333C4E;
+    font-size: 15px;
+}
+
+.page-footer a {
+    color: #FFF;
+}
+
+.page-footer a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+.sky-blue {
+    color: #89C4F4;
+}

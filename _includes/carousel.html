@@ -1,0 +1,62 @@
+<!-- Cover Corousel -->
+<!-- ============== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <header class="header-hidden">
+    <h2>Carousel con imágenes del grupo</h2>
+  </header>
+  
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    {% for img in site.data.img_cover %}
+    <li data-target="#myCarousel" data-slide-to="{{ forloop.index }}" class="{% if forloop.index == 1 %} active {% endif %}"></li>
+    {% endfor %}
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    {% for img in site.data.img_cover %}
+    <div class="item {% if forloop.index == 1 %} active {% endif %} ad{{ forloop.index }}">
+      <!-- Imagen -->
+      <div class="fill" style="background-image:url({{ img.url }});"></div>
+      <!-- Descripción -->
+      {% if img.title %}
+      
+      <div class="tex-left-area hidden-xs">
+	<h3 class="title">{{ img.title }}</h3>
+	<div class="description">
+	  <p>{{ img.description }}</p>
+	</div><!--/description -->
+      </div><!--/text-left-area -->
+
+      <div class="text-left-area-small visible-xs">
+	<h3 class="title-small">{{ img.title }}</h3>
+      </div><!--/text-left-area-small -->
+
+      {% endif %}
+    </div><!--/item -->
+    {% endfor %}
+  </div><!--/carousel-inner -->
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<script>
+  /* Carousel options */
+  
+  $(function () {
+    $('#myCarousel').carousel({
+      interval:5000,
+        pause: "false"
+    });
+  });
+</script>

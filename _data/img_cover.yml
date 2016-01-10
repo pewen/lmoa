@@ -1,0 +1,11 @@
+- url: /img/fluorecencia.jpg
+  description: Various polymer dot nanoparticles suspended in water, under UV excitation
+  title: Titulo
+
+- url: /img/muestra.jpg
+  description: AFM of polymer dot nanoparticles dispersed on a mica substrate.
+  title: Conjugate polymer
+  
+- url: /img/micros.png
+  description: Arreglo espacial de componentes sobre mesa antivibratoria.
+  title: Microscopio Óptico

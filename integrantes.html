@@ -1,0 +1,80 @@
+---
+layout: page
+title: Miembros
+---
+
+<h2>Integrantes</h2>
+
+<h3>Investigadores</h3>
+<div class="row integrantes">
+  {% assign cnt = 0 %}
+  {% for member in site.equipo %}
+  {% if member.position == 'investigador' %}
+  <div class="col-md-3 {% if cnt == 0 %} col-md-offset-3 {% endif %}">
+    <div class="box-def">
+
+      <div class="box-img">
+	<a href="{{ member.url }}">
+	  <img alt="picture of {{ member.name }}" class="img-responsive" src="{{ member.img }}" />
+	</a>
+      </div>
+      
+      <h4><a href="{{ member.url }}">{{ member.name }}</a></h4>
+    </div><!--/box-def -->
+  </div><!--/col-md-3 -->
+  {% assign cnt = cnt | plus:1 %}
+  {% endif %}
+  {% endfor %}
+</div><!--/row -->
+
+
+
+<h3>Estudiantes de Doctorado</h3>
+<div class="row integrantes">
+  {% assign cnt = 0 %}
+  {% for member in site.equipo %}
+  {% if member.position == 'doctorando' %}
+  <div class="col-md-3 {% if cnt == 0 %} col-md-offset-4 {% endif %}">
+    <div class="box-def">
+
+      <div class="box-img">
+	<a href="{{ member.url }}">
+	  <img alt="picture of {{ member.name }}" class="img-responsive" src="{{ member.img }}" />
+	</a>
+      </div>
+      
+      <h4>{{ member.name }}</h4>
+      <p>{{ member.job }}.</p>
+    </div><!--/box-def -->
+  </div><!--/col-md-4 -->
+  {% assign cnt = cnt | plus:1 %}
+  {% endif %}
+  {% endfor %}
+</div><!--/row -->
+
+
+
+<h3>Estudiantes de Grado</h3>
+<div class="row integrantes">
+  {% assign cnt = 0 %}
+  {% for member in site.equipo %}
+  {% if member.position == 'grado' %}
+  <div class="col-md-3 {% if cnt == 0 %} col-md-offset-3 {% endif %}">
+    <div class="box-def">
+
+      <div class="box-img">
+	<a href="{{ member.url }}">
+	  <img alt="picture of {{ member.name }}" class="img-responsive" src="{{ member.img }}" />
+	</a>
+      </div>
+      
+      <h4>{{ member.name }}</h4>
+      <p>{{ member.job }}.</p>
+    </div><!--/box-def -->
+  </div><!--/col-md-3 -->
+  {% assign cnt =  cnt | plus:1 %}
+  {% endif %}
+  {% endfor %}
+</div><!--/row -->
+
+
