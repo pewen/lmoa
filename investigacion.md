@@ -16,11 +16,11 @@ Los polímeros conjugados son macromoléculas compuestas por monómeros que pres
 
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
-		<img class="img-responsive" src="/img/eff*3.svg" alt="" />
+		<img class="img-responsive" src="{{ site.url }}/img/eff*3.svg" alt="" />
 	</div>
 </div>
 
-$$ P_{TE} = \dfrac{k_{TE}}{k_{TE} + k_{D}} $$
+$$ E = \sum_{j=1}^{3}\frac{1}{n_{j}} \sum_{i=1}^{n_{j}} (Q_{e_{i}} - Q_{s_{i}})^{2} $$
 
 ### Hardware and Computational Methods for Data Collection and Processing in Single Molecule Spectroscopy
 --------
