@@ -53,6 +53,10 @@ hr {
     overflow: hidden;
 }
 
+.main {
+    padding-top: 50px;
+}
+
 /*************************************************************
  * Nav Bar
  *************************************************************/
@@ -135,7 +139,7 @@ hr {
 
 #banner_name {
     font-weight: normal;
-    font-size: 22px;
+    font-size: 20px;
     color: #59B7D9;
     float: left;
     text-transform: uppercase;
